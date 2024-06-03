@@ -1,0 +1,190 @@
+[gd_scene load_steps=36 format=3 uid="uid://c2383u0jbk7y4"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://d4gptmmrywvwx" path="res://sprites/run_01.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://djplejdijd3ga" path="res://sprites/run_11.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b6a2g0lexef58" path="res://sprites/run_02.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://d2n2klss2xkpi" path="res://sprites/run_10.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://chp0gw0n76wva" path="res://sprites/run_09.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bu2lwelxvuv0i" path="res://sprites/run_00.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://3466nve3u21p" path="res://sprites/run_03.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://8le4edbg6pp" path="res://sprites/run_04.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://6k7tnqgvtfyh" path="res://sprites/run_06.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://cga23c5lxi70y" path="res://sprites/run_05.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dtxk5hi2g7vw" path="res://sprites/run_07.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://boiink6vkm155" path="res://sprites/run_08.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://bapo2hhpa3dhl" path="res://sprites/Fall (32x32).png" id="14"]
+[ext_resource type="Texture2D" uid="uid://c2qufxq5q3m6m" path="res://sprites/idle_00.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://cctv1386gxdv6" path="res://sprites/idle_06.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://c84glqoggj81p" path="res://sprites/idle_10.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://t16l33i5e7bi" path="res://sprites/idle_09.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://nciw071dym2o" path="res://sprites/idle_03.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://b70flr26ht127" path="res://sprites/idle_02.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://bmi2bi2nk5dvs" path="res://sprites/idle_07.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://dnugom0ai10tb" path="res://sprites/idle_01.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://c1tsqxiheds40" path="res://sprites/idle_08.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://dhdv2bycg6wt5" path="res://sprites/idle_04.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://bjes4f01iuj4a" path="res://sprites/Jump (32x32).png" id="25"]
+[ext_resource type="Texture2D" uid="uid://brb3e1kxd2n62" path="res://sprites/idle_05.png" id="26"]
+[ext_resource type="Texture2D" uid="uid://d1xbe54sf8yss" path="res://sprites/doubleJump_5.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://cn8k1u5r21ckc" path="res://sprites/doubleJump_3.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://25ualtcnqub6" path="res://sprites/doubleJump_2.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://b8clf30io7f4p" path="res://sprites/doubleJump_0.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://ce5pmrwbbihft" path="res://sprites/doubleJump_4.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://dyl8nifhlmiuh" path="res://sprites/doubleJump_1.png" id="32"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(20, 24)
+
+[sub_resource type="SpriteFrames" id="2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27")
+}],
+"loop": true,
+"name": &"doubleJump",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(20, 1.40609)
+
+[node name="player" type="CharacterBody2D"]
+position = Vector2(300, 529)
+script = ExtResource("1")
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -14)
+shape = SubResource("1")
+
+[node name="animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("2")
+animation = &"idle"
+frame = 8
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+
+[node name="check_platform" type="RayCast2D" parent="."]
+position = Vector2(0.132431, -5.16489)
+collision_mask = 2147483652
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="shape" type="CollisionShape2D" parent="Area2D"]
+modulate = Color(0.109804, 0.905882, 0.160784, 1)
+position = Vector2(0, -2.11893)
+shape = SubResource("3")
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://5yujsbq7vgps"]
+
+[ext_resource type="Texture2D" uid="uid://chv5voctr01ji" path="res://backgrounds/bg-purple.png" id="1"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="2"]
+
+[sub_resource type="Shader" id="1"]
+code = "shader_type canvas_item;
+uniform float scroll_speed_x;
+uniform float scroll_speed_y;
+
+void fragment(){
+	vec2 shifteduv = UV;
+	shifteduv.x += TIME * scroll_speed_x;
+	shifteduv.y += TIME * scroll_speed_y;
+	vec4 color = texture(TEXTURE, shifteduv);
+	COLOR = color;
+}"
+
+[sub_resource type="ShaderMaterial" id="2"]
+shader = SubResource("1")
+shader_parameter/scroll_speed_x = null
+shader_parameter/scroll_speed_y = null
+
+[node name="background" type="Node2D"]
+script = ExtResource("2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("2")
+texture = ExtResource("1")
+stretch_mode = 2
