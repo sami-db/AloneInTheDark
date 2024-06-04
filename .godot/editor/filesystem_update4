@@ -1,5 +1,6 @@
 res://stages/world.tscn
-res://scripts/player.gd
 res://scenes/player.tscn
 res://scenes/map.tscn
 res://scenes/background.tscn
+res://scripts/player.gd
+res://scripts/Control_Scene.gd

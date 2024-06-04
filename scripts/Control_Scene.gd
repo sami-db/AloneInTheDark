@@ -5,7 +5,6 @@
 extends Node2D
 
 # Ici j'ai créé la déclaration d'une variable nommée "message_de_bienvenu" qui comprends la string "Bonjour!"
-var message_de_bienvenu = "Bonjour!"
 
 # La fonction _ready est une fonction de Godot appelée automatiquement lorsque le node entre dans le scène pour la première fois (souvent au début du jeu)
 # Généralement, si le nom d'une fonction commence par un underscore, c'est une fonction qui appartient à Godot, et qui est appelée automatiquement dans certaines situations
@@ -13,10 +12,8 @@ func _ready():
 	# print("quelque chose") est une fonction Godot  qui permet d'afficher des messages dans la console
 	# la console de Godot est accéssible en cliquant sur "Output" ("Sortie") en bas de votre écran
 	# Ici j'affiche dans la console le contenu de la variable "message_de_bienvenu" ("Bonjour!")
-	print(message_de_bienvenu)
 	
 	# Sans cette ligne, Godot ne lira pas le MIDI
-	OS.open_midi_inputs( )
 	
 	# Une boucle qui liste et affiche tous les appareil MIDI connecté à l'ordinateur
 	# "get_connected_midi_inputs" est une fonction de Godot qui appartient à OS (qui est aussi une variable de Godot)

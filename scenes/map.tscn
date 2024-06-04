@@ -1,9 +1,10 @@
 [gd_scene load_steps=72 format=3 uid="uid://mheacsvs6kb3"]
 
-[ext_resource type="Texture2D" uid="uid://bc04dm2hgqfj7" path="res://terrain/Terrain (16x16).png" id="1"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7u4ch"]
+load_path = "res://.godot/imported/Terrain (16x16).png-472409efef1580d7fddb191488180ba7.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tjmjt"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(304, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -52,7 +53,7 @@ margins = Vector2i(304, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gmu5m"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(272, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -101,7 +102,7 @@ margins = Vector2i(272, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n1g6o"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(288, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -150,7 +151,7 @@ margins = Vector2i(288, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67tuj"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(304, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -199,7 +200,7 @@ margins = Vector2i(304, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04wag"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(320, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -248,7 +249,7 @@ margins = Vector2i(320, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqjwf"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(336, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -297,7 +298,7 @@ margins = Vector2i(336, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2knk8"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(320, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -346,7 +347,7 @@ margins = Vector2i(320, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_thmak"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(336, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -395,7 +396,7 @@ margins = Vector2i(336, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gygon"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(192, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -444,7 +445,7 @@ margins = Vector2i(192, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lubwv"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(208, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -493,7 +494,7 @@ margins = Vector2i(208, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0kjgj"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(224, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -542,7 +543,7 @@ margins = Vector2i(224, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_064mq"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(192, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -591,7 +592,7 @@ margins = Vector2i(192, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pg1oj"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(208, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -640,7 +641,7 @@ margins = Vector2i(208, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52e15"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(224, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -689,7 +690,7 @@ margins = Vector2i(224, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n7aq7"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(208, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -738,7 +739,7 @@ margins = Vector2i(208, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nqy8f"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(224, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -787,7 +788,7 @@ margins = Vector2i(224, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jawj"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(240, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -836,7 +837,7 @@ margins = Vector2i(240, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j8gsl"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(240, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -885,7 +886,7 @@ margins = Vector2i(240, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5mln"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(240, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -934,7 +935,7 @@ margins = Vector2i(240, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c4onh"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(96, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -983,7 +984,7 @@ margins = Vector2i(96, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8sp2"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(112, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1032,7 +1033,7 @@ margins = Vector2i(112, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yclv3"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(128, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1073,7 +1074,7 @@ margins = Vector2i(128, 64)
 0:0/7/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u3qgr"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(96, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1122,7 +1123,7 @@ margins = Vector2i(96, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nfux4"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(112, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1171,7 +1172,7 @@ margins = Vector2i(112, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rxwc3"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(128, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1220,7 +1221,7 @@ margins = Vector2i(128, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_50uqo"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(96, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1269,7 +1270,7 @@ margins = Vector2i(96, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ltqq8"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(112, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1318,7 +1319,7 @@ margins = Vector2i(112, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qmy4v"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(128, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1367,7 +1368,7 @@ margins = Vector2i(128, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0f622"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(144, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1416,7 +1417,7 @@ margins = Vector2i(144, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wtqhm"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(160, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1465,7 +1466,7 @@ margins = Vector2i(160, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3susj"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(144, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1745,7 +1746,7 @@ margins = Vector2i(144, 80)
 8:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4w5vy"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(160, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -1794,7 +1795,7 @@ margins = Vector2i(160, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v71fc"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(272, 0)
 texture_region_size = Vector2i(16, 8)
 0:0/next_alternative_id = 8
@@ -1844,7 +1845,7 @@ texture_region_size = Vector2i(16, 8)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(4, 8, 4, -8, -4, -8, -4, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8bbgu"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(288, 0)
 texture_region_size = Vector2i(16, 8)
 0:0/next_alternative_id = 8
@@ -1894,7 +1895,7 @@ texture_region_size = Vector2i(16, 8)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(4, 8, 4, -8, -4, -8, -4, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jke3l"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(304, 0)
 texture_region_size = Vector2i(16, 8)
 0:0/next_alternative_id = 8
@@ -1944,7 +1945,7 @@ texture_region_size = Vector2i(16, 8)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(4, 8, 4, -8, -4, -8, -4, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehu0i"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(272, 16)
 texture_region_size = Vector2i(16, 8)
 0:0/next_alternative_id = 8
@@ -2002,7 +2003,7 @@ texture_region_size = Vector2i(16, 8)
 0:0/7/physics_layer_0/polygon_0/one_way = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wd1bu"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(288, 16)
 texture_region_size = Vector2i(16, 8)
 0:0/next_alternative_id = 8
@@ -2060,7 +2061,7 @@ texture_region_size = Vector2i(16, 8)
 0:0/7/physics_layer_0/polygon_0/one_way = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5y7qc"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(304, 16)
 texture_region_size = Vector2i(16, 8)
 0:0/next_alternative_id = 8
@@ -2118,7 +2119,7 @@ texture_region_size = Vector2i(16, 8)
 0:0/7/physics_layer_0/polygon_0/one_way = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l7p71"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(0, 64)
 14:0/0 = 0
 14:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -2174,7 +2175,7 @@ margins = Vector2i(0, 64)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6j1d"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(16, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2223,7 +2224,7 @@ margins = Vector2i(16, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ih1tk"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(32, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2272,7 +2273,7 @@ margins = Vector2i(32, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fke81"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(0, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2321,7 +2322,7 @@ margins = Vector2i(0, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_34sh2"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(16, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2370,7 +2371,7 @@ margins = Vector2i(16, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cj5xe"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(32, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2419,7 +2420,7 @@ margins = Vector2i(32, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_20b3e"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(0, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2468,7 +2469,7 @@ margins = Vector2i(0, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1d48w"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(16, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2517,7 +2518,7 @@ margins = Vector2i(16, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b8m7t"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(32, 96)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2566,7 +2567,7 @@ margins = Vector2i(32, 96)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ctyrk"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(0, 128)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2615,7 +2616,7 @@ margins = Vector2i(0, 128)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nn8nw"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(16, 128)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2664,7 +2665,7 @@ margins = Vector2i(16, 128)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04wih"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(32, 128)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2713,7 +2714,7 @@ margins = Vector2i(32, 128)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgm01"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(0, 144)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2762,7 +2763,7 @@ margins = Vector2i(0, 144)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tplfp"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(16, 144)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2811,7 +2812,7 @@ margins = Vector2i(16, 144)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hra6v"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(32, 144)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2860,7 +2861,7 @@ margins = Vector2i(32, 144)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0jtir"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(0, 160)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2909,7 +2910,7 @@ margins = Vector2i(0, 160)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01p7d"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(16, 160)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -2958,7 +2959,7 @@ margins = Vector2i(16, 160)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jmmoi"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(32, 160)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3007,7 +3008,7 @@ margins = Vector2i(32, 160)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1r0dv"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(48, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3056,7 +3057,7 @@ margins = Vector2i(48, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bo87"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(48, 128)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3105,7 +3106,7 @@ margins = Vector2i(48, 128)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_imubr"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(64, 128)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3154,7 +3155,7 @@ margins = Vector2i(64, 128)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ywbo"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(48, 144)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3203,7 +3204,7 @@ margins = Vector2i(48, 144)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c22m6"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(64, 144)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3252,7 +3253,7 @@ margins = Vector2i(64, 144)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jc6rm"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(64, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3301,7 +3302,7 @@ margins = Vector2i(64, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tqxyi"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(48, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3350,7 +3351,7 @@ margins = Vector2i(48, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l7y51"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(64, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3399,7 +3400,7 @@ margins = Vector2i(64, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjbxc"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(272, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3448,7 +3449,7 @@ margins = Vector2i(272, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jbv2g"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(288, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3497,7 +3498,7 @@ margins = Vector2i(288, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mbs8e"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(304, 64)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3546,7 +3547,7 @@ margins = Vector2i(304, 64)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlcuw"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(272, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
@@ -3595,7 +3596,7 @@ margins = Vector2i(272, 80)
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, -8, -8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bntir"]
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_7u4ch")
 margins = Vector2i(288, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
