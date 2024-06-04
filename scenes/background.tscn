@@ -26,5 +26,10 @@ script = ExtResource("2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("2")
+offset_left = -10.0
+offset_top = 30.0
+offset_right = 630.0
+offset_bottom = 350.0
+scale = Vector2(1.79286, 2.01695)
 texture = ExtResource("1")
 stretch_mode = 2

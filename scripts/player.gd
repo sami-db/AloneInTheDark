@@ -20,16 +20,17 @@ func _ready():
 func _physics_process(delta: float):
 	velocity.y += gravity * delta
 	
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("ui_left"):
 		move_left()
-	elif Input.is_action_pressed("move_right"):
+	elif Input.is_action_pressed("ui_right"):
 		move_right()
 	else:
 		velocity.x = 0
 	
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("ui_up"):
 		jump()
 
+	# Utiliser la méthode appropriée pour déplacer le personnage
 	move_and_slide()
 
 	if is_on_floor():
@@ -49,7 +50,7 @@ func _physics_process(delta: float):
 			else:
 				$animation.play("jump")
 		else:
-			$animation.play("fall")	
+			$animation.play("fall")    
 
 func move_right():
 	velocity.x = speed
@@ -61,7 +62,7 @@ func move_left():
 
 func jump():
 	if on_ground:
-		if $check_platform.is_colliding() and Input.is_action_pressed("move_down"):
+		if $check_platform.is_colliding() and Input.is_action_pressed("ui_down"):
 			set_collision_layer_value(2, false)
 		else:
 			velocity.y = -jump_force

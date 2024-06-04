@@ -1,23 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717429692
+::res://::1717499418
 default_env.tres::Environment::-1::1717422633::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1717422633::0::1::::<><>::
 icon.png::CompressedTexture2D::5087195685049580242::1717422633::1717422633::1::::<><>::
+README.md::TextFile::-1::1717430010::0::1::::<><>::
 ::res://backgrounds/::1717422638
 bg-purple.png::CompressedTexture2D::5309374956446195418::1717422638::1717422638::1::::<><>::
-::res://scenes/::1717424277
-background.tscn::PackedScene::2156441734974548880::1717423916::0::1::::<><>::uid://chv5voctr01ji::::res://backgrounds/bg-purple.png<>res://scripts/background.gd
-map.tscn::PackedScene::856959769738480670::1717424277::0::1::::<><>::uid://bc04dm2hgqfj7::::res://terrain/Terrain (16x16).png
-player.tscn::PackedScene::6727797475215179917::1717424275::0::1::::<><>::res://scripts/player.gd<>uid://d4gptmmrywvwx::::res://sprites/run_01.png<>uid://djplejdijd3ga::::res://sprites/run_11.png<>uid://b6a2g0lexef58::::res://sprites/run_02.png<>uid://d2n2klss2xkpi::::res://sprites/run_10.png<>uid://chp0gw0n76wva::::res://sprites/run_09.png<>uid://bu2lwelxvuv0i::::res://sprites/run_00.png<>uid://3466nve3u21p::::res://sprites/run_03.png<>uid://8le4edbg6pp::::res://sprites/run_04.png<>uid://6k7tnqgvtfyh::::res://sprites/run_06.png<>uid://cga23c5lxi70y::::res://sprites/run_05.png<>uid://dtxk5hi2g7vw::::res://sprites/run_07.png<>uid://boiink6vkm155::::res://sprites/run_08.png<>uid://bapo2hhpa3dhl::::res://sprites/Fall (32x32).png<>uid://c2qufxq5q3m6m::::res://sprites/idle_00.png<>uid://cctv1386gxdv6::::res://sprites/idle_06.png<>uid://c84glqoggj81p::::res://sprites/idle_10.png<>uid://t16l33i5e7bi::::res://sprites/idle_09.png<>uid://nciw071dym2o::::res://sprites/idle_03.png<>uid://b70flr26ht127::::res://sprites/idle_02.png<>uid://bmi2bi2nk5dvs::::res://sprites/idle_07.png<>uid://dnugom0ai10tb::::res://sprites/idle_01.png<>uid://c1tsqxiheds40::::res://sprites/idle_08.png<>uid://dhdv2bycg6wt5::::res://sprites/idle_04.png<>uid://bjes4f01iuj4a::::res://sprites/Jump (32x32).png<>uid://brb3e1kxd2n62::::res://sprites/idle_05.png<>uid://d1xbe54sf8yss::::res://sprites/doubleJump_5.png<>uid://cn8k1u5r21ckc::::res://sprites/doubleJump_3.png<>uid://25ualtcnqub6::::res://sprites/doubleJump_2.png<>uid://b8clf30io7f4p::::res://sprites/doubleJump_0.png<>uid://ce5pmrwbbihft::::res://sprites/doubleJump_4.png<>uid://dyl8nifhlmiuh::::res://sprites/doubleJump_1.png
-::res://scripts/::1717423642
+::res://scenes/::1717504762
+background.tscn::PackedScene::2156441734974548880::1717504762::0::1::::<><>::uid://chv5voctr01ji::::res://backgrounds/bg-purple.png<>res://scripts/background.gd
+map.tscn::PackedScene::856959769738480670::1717504762::0::1::::<><>::uid://bc04dm2hgqfj7::::res://terrain/Terrain (16x16).png
+player.tscn::PackedScene::6727797475215179917::1717504762::0::1::::<><>::res://scripts/player.gd<>uid://d4gptmmrywvwx::::res://sprites/run_01.png<>uid://bu2lwelxvuv0i::::res://sprites/run_00.png<>uid://3466nve3u21p::::res://sprites/run_03.png<>uid://8le4edbg6pp::::res://sprites/run_04.png<>uid://6k7tnqgvtfyh::::res://sprites/run_06.png<>uid://cga23c5lxi70y::::res://sprites/run_05.png<>uid://cw4h4vu03qnhn::::res://sprites/jump_0.png<>uid://dtxk5hi2g7vw::::res://sprites/run_07.png<>uid://cp7mjdu38fu83::::res://sprites/jump_1.png<>uid://boiink6vkm155::::res://sprites/run_08.png<>uid://bapo2hhpa3dhl::::res://sprites/Fall (32x32).png<>uid://c2qufxq5q3m6m::::res://sprites/idle_00.png<>uid://dnugom0ai10tb::::res://sprites/idle_01.png<>uid://d1xbe54sf8yss::::res://sprites/doubleJump_5.png<>uid://cn8k1u5r21ckc::::res://sprites/doubleJump_3.png<>uid://25ualtcnqub6::::res://sprites/doubleJump_2.png<>uid://b8clf30io7f4p::::res://sprites/doubleJump_0.png<>uid://ce5pmrwbbihft::::res://sprites/doubleJump_4.png<>uid://dyl8nifhlmiuh::::res://sprites/doubleJump_1.png
+::res://scripts/::1717499967
 background.gd::GDScript::-1::1717423642::0::1::::<>Node2D<>::
-Control_Scene.gd::GDScript::-1::1717422638::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1717423396::0::1::::<>CharacterBody2D<>::
+Control_Scene.gd::GDScript::-1::1717489443::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1717499967::0::1::::<>CharacterBody2D<>::
 ::res://sounds/::1717422638
 bgmusic.ogg::AudioStreamOggVorbis::2587571669820439934::1717422638::1717422638::1::::<><>::
 foot_sound.wav::AudioStreamWAV::1938532930885001055::1717422638::1717422638::1::::<><>::
 jump.wav::AudioStreamWAV::5783914452317300585::1717422638::1717422638::1::::<><>::
-::res://sprites/::1717422640
+::res://sprites/::1717504914
 doubleJump_0.png::CompressedTexture2D::4707459604803615901::1717422638::1717422638::1::::<><>::
 doubleJump_1.png::CompressedTexture2D::8868529758012847359::1717422638::1717422638::1::::<><>::
 doubleJump_2.png::CompressedTexture2D::1958245057921027681::1717422638::1717422638::1::::<><>::
@@ -25,6 +26,9 @@ doubleJump_3.png::CompressedTexture2D::5754075498754430846::1717422638::17174226
 doubleJump_4.png::CompressedTexture2D::5116461185908224713::1717422638::1717422638::1::::<><>::
 doubleJump_5.png::CompressedTexture2D::9031722155505583150::1717422638::1717422638::1::::<><>::
 Fall (32x32).png::CompressedTexture2D::2418284983497877893::1717422638::1717422638::1::::<><>::
+fall_0.png::CompressedTexture2D::7986104101781506617::1717504821::1717504982::1::::<><>::
+fall_1.png::CompressedTexture2D::5816875297898388240::1717504875::1717504982::1::::<><>::
+fall_2.png::CompressedTexture2D::7456034764015130203::1717504914::1717504982::1::::<><>::
 hit_0.png::CompressedTexture2D::6329088262529354904::1717422638::1717422639::1::::<><>::
 hit_1.png::CompressedTexture2D::3180057263564546316::1717422639::1717422639::1::::<><>::
 hit_2.png::CompressedTexture2D::2474078599806957521::1717422639::1717422639::1::::<><>::
@@ -32,8 +36,8 @@ hit_3.png::CompressedTexture2D::8710180842750143048::1717422639::1717422639::1::
 hit_4.png::CompressedTexture2D::396278711311697729::1717422639::1717422639::1::::<><>::
 hit_5.png::CompressedTexture2D::6683195656281536385::1717422639::1717422639::1::::<><>::
 hit_6.png::CompressedTexture2D::7443680571303008800::1717422639::1717422639::1::::<><>::
-idle_00.png::CompressedTexture2D::6702194692642370170::1717422639::1717422639::1::::<><>::
-idle_01.png::CompressedTexture2D::8113394545438241275::1717422639::1717422639::1::::<><>::
+idle_00.png::CompressedTexture2D::6702194692642370170::1717502919::1717502923::1::::<><>::
+idle_01.png::CompressedTexture2D::8113394545438241275::1717503080::1717503082::1::::<><>::
 idle_02.png::CompressedTexture2D::4684397288683719878::1717422639::1717422639::1::::<><>::
 idle_03.png::CompressedTexture2D::917110109914363012::1717422639::1717422639::1::::<><>::
 idle_04.png::CompressedTexture2D::7658100452790026644::1717422639::1717422639::1::::<><>::
@@ -44,15 +48,17 @@ idle_08.png::CompressedTexture2D::6638097178593476211::1717422639::1717422639::1
 idle_09.png::CompressedTexture2D::1389165235548979114::1717422639::1717422639::1::::<><>::
 idle_10.png::CompressedTexture2D::7149324970280444399::1717422639::1717422639::1::::<><>::
 Jump (32x32).png::CompressedTexture2D::3027522783774340254::1717422639::1717422639::1::::<><>::
-run_00.png::CompressedTexture2D::3846643158359839678::1717422639::1717422639::1::::<><>::
-run_01.png::CompressedTexture2D::9208070117705509671::1717422639::1717422639::1::::<><>::
+jump_0.png::CompressedTexture2D::6377340824323643791::1717504648::1717504682::1::::<><>::
+jump_1.png::CompressedTexture2D::5892478975927592838::1717504673::1717504682::1::::<><>::
+run_00.png::CompressedTexture2D::3846643158359839678::1717503765::1717503813::1::::<><>::
+run_01.png::CompressedTexture2D::9208070117705509671::1717503792::1717503813::1::::<><>::
 run_02.png::CompressedTexture2D::4563926240329472513::1717422639::1717422639::1::::<><>::
-run_03.png::CompressedTexture2D::2027092878583874319::1717422639::1717422639::1::::<><>::
-run_04.png::CompressedTexture2D::68801025474309929::1717422640::1717422640::1::::<><>::
-run_05.png::CompressedTexture2D::5195663942170138490::1717422640::1717422640::1::::<><>::
-run_06.png::CompressedTexture2D::2198475511994173043::1717422640::1717422640::1::::<><>::
-run_07.png::CompressedTexture2D::251205643927883776::1717422640::1717422640::1::::<><>::
-run_08.png::CompressedTexture2D::3386089042011376354::1717422640::1717422640::1::::<><>::
+run_03.png::CompressedTexture2D::2027092878583874319::1717503886::1717503961::1::::<><>::
+run_04.png::CompressedTexture2D::68801025474309929::1717503982::1717504089::1::::<><>::
+run_05.png::CompressedTexture2D::5195663942170138490::1717504008::1717504089::1::::<><>::
+run_06.png::CompressedTexture2D::2198475511994173043::1717504035::1717504089::1::::<><>::
+run_07.png::CompressedTexture2D::251205643927883776::1717504060::1717504089::1::::<><>::
+run_08.png::CompressedTexture2D::3386089042011376354::1717504086::1717504089::1::::<><>::
 run_09.png::CompressedTexture2D::5296658773514397818::1717422640::1717422640::1::::<><>::
 run_10.png::CompressedTexture2D::9082855563270863958::1717422640::1717422640::1::::<><>::
 run_11.png::CompressedTexture2D::7822602817948767396::1717422640::1717422640::1::::<><>::
@@ -61,7 +67,7 @@ wallJump_1.png::CompressedTexture2D::1544929410535038279::1717422640::1717422640
 wallJump_2.png::CompressedTexture2D::4958591256722682345::1717422640::1717422640::1::::<><>::
 wallJump_3.png::CompressedTexture2D::8237475837946370029::1717422640::1717422640::1::::<><>::
 wallJump_4.png::CompressedTexture2D::1104415814675479277::1717422640::1717422640::1::::<><>::
-::res://stages/::1717423915
-world.tscn::PackedScene::37583976658964334::1717423915::0::1::::<><>::uid://c2383u0jbk7y4::::res://scenes/player.tscn<>uid://bc4o6saxgk05o::::res://sounds/bgmusic.ogg<>uid://mheacsvs6kb3::::res://scenes/map.tscn<>uid://5yujsbq7vgps::::res://scenes/background.tscn<>res://scripts/Control_Scene.gd
+::res://stages/::1717504761
+world.tscn::PackedScene::37583976658964334::1717504761::0::1::::<><>::uid://c2383u0jbk7y4::::res://scenes/player.tscn<>uid://bc4o6saxgk05o::::res://sounds/bgmusic.ogg<>uid://mheacsvs6kb3::::res://scenes/map.tscn<>uid://5yujsbq7vgps::::res://scenes/background.tscn<>res://scripts/Control_Scene.gd
 ::res://terrain/::1717422640
 Terrain (16x16).png::CompressedTexture2D::2580174637309224294::1717422640::1717422640::1::::<><>::
