@@ -463,7 +463,7 @@ texture = ExtResource("5_fh8v7")
 6:7/0 = 0
 6:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:7/0/physics_layer_0/angular_velocity = 0.0
-6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 5.03125, -8, -0.28125, -4.25, -8, -0.875)
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, -0.28125, -4.25, -8, -0.875)
 8:7/0 = 0
 8:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:7/0/physics_layer_0/angular_velocity = 0.0
@@ -2968,6 +2968,7 @@ scale = Vector2(1.1, 1.343)
 texture = ExtResource("9_tijtv")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2(-0.611298, 0)
 color = Color(0, 0, 0, 1)
 
