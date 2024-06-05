@@ -25,6 +25,7 @@ public partial class Arduino_Manager : Node2D
 	public int boutonUn;
 	public int boutonDeux;
 	public int boutonTrois;
+	public int boutonQuatre;
 
 	public int piezzoUn;
 	public int piezzoDeux;
@@ -57,10 +58,20 @@ public partial class Arduino_Manager : Node2D
 			
 			foreach (var valeur in tableauValeurs)					//Affichage des valeurs dans la console pour debugger
 			{
-				//GD.Print($"<{valeur}>");
+				//GD.Print($"<{valeur}>"); // A COMMENTER
 			}
-			ultrasonUn = Int32.Parse(tableauValeurs[0]);
-			potentiometreUn = Int32.Parse(tableauValeurs[1]);
+			
+			boutonUn = Int32.Parse(tableauValeurs[0]);
+			boutonDeux = Int32.Parse(tableauValeurs[1]);
+			boutonTrois = Int32.Parse(tableauValeurs[2]);
+			boutonQuatre = Int32.Parse(tableauValeurs[3]);
+			potentiometreUn = Int32.Parse(tableauValeurs[4]);
+			
+			GD.Print(boutonUn);
+			GD.Print(boutonDeux);
+			GD.Print(boutonTrois);
+			GD.Print(boutonQuatre);
+			GD.Print(potentiometreUn);
 			
 			currentTime = Time.GetTicksMsec();
 			
