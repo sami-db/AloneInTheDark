@@ -12,6 +12,7 @@ var on_ground: bool = false
 var can_double_jump: bool = false
 var is_double_jumping: bool = false
 
+
 func _ready():
 	# Calculer la gravité et la force de saut au démarrage
 	gravity = (2 * jump_height) / pow(time_jump_apex, 2)
