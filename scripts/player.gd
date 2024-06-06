@@ -34,7 +34,7 @@ func _ready():
 	add_child(label_timer)
 	
 	# Cacher le mini-jeu au démarrage
-	mini_game.hide()
+	#mini_game.hide()
 	mini_game.connect("mini_game_success", Callable(self, "_on_mini_game_success"))
 	mini_game.z_index = 100  # S'assurer que le mini-jeu est rendu au-dessus des autres éléments
 	print("Player ready")
@@ -121,8 +121,7 @@ func start_mini_game(lamp):
 	current_lamp = lamp
 	mini_game.set_position(position + Vector2(100, 0))  # Positionner le mini-jeu à droite du joueur
 	mini_game.show()
-	mini_game.z_index = 100  # S'assurer que le mini-jeu est rendu au-dessus des autres éléments
-	mini_game.start_mini_game()
+	mini_game.start_mini_game(lamp)
 	print("Mini-game position: %s" % str(mini_game.global_position))
 	print("MiniGame visibility après show: ", mini_game.visible)
 	print("MiniGame Z-Index: ", mini_game.z_index)

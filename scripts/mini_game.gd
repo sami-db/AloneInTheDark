@@ -5,17 +5,21 @@ signal mini_game_success
 var is_active = false
 var target_angle = 0.0
 var current_angle = 0.0
+var flexibility = 20
+var lamp_node = null  # Référence à la lampe
+
 @export var rotation_speed: float = 90.0  # Vitesse de rotation en degrés par seconde
+@export var rotation_speed_indicator: float = 10.0  # Vitesse de rotation de l'indicateur par la molette
 
 @onready var circle = $Circle
 @onready var indicator = $Circle/Indicator
 
 func _ready():
-	hide()
+	circle.hide()
+	indicator.hide()
 	set_process(false)
 	print("MiniGame ready")
-	
-	# Vérifier si les nœuds sont correctement trouvés
+
 	if circle == null:
 		print("Erreur : nœud Circle non trouvé")
 	else:
@@ -28,14 +32,15 @@ func _ready():
 		print("Indicator trouvé")
 		print("Indicator visibility: ", indicator.visible)
 
-	# Vérifier la couche de rendu
 	print("MiniGame z_index: %d" % z_index)
 
-func start_mini_game():
+func start_mini_game(lamp):
+	lamp_node = lamp
 	is_active = true
 	target_angle = randf() * 360.0
 	current_angle = 0.0
-	show()
+	circle.show()
+	indicator.show()
 	set_process(true)
 	print("MiniGame started")
 	print("Target angle: %f" % target_angle)
@@ -43,6 +48,8 @@ func start_mini_game():
 	print("MiniGame position: %s" % str(global_position))
 	print("Circle position: %s" % str(circle.global_position))
 	print("Indicator position: %s" % str(indicator.global_position))
+	print("Circle visibility après show: ", circle.visible)
+	print("Indicator visibility après show: ", indicator.visible)
 	print("MiniGame visibility après show: ", visible)
 	print("MiniGame z_index après show: %d" % z_index)
 
@@ -51,27 +58,47 @@ func _process(delta):
 		return
 
 	# Utiliser la molette de la souris pour ajuster l'angle actuel
-	if Input.is_action_pressed("ui_scroll_up"):
+	if Input.is_action_pressed("scroll_up"):
 		current_angle -= rotation_speed * delta
-	elif Input.is_action_pressed("ui_scroll_down"):
+		print("Scroll up detected, current angle: %f" % current_angle)
+	elif Input.is_action_pressed("scroll_down"):
 		current_angle += rotation_speed * delta
+		print("Scroll down detected, current angle: %f" % current_angle)
 
 	# Assurez-vous que l'angle reste entre 0 et 360 degrés
-	if current_angle < 0:
-		current_angle += 360
-	elif current_angle >= 360:
-		current_angle -= 360
-
+	current_angle = fmod(current_angle, 360.0)
 	indicator.rotation_degrees = current_angle
 
-	# Vérifier si la touche E est pressée pour valider la position
-	if Input.is_action_just_pressed("activate_lamp"):
-		var angle_diff = abs(current_angle - target_angle)
-		if angle_diff < 5.0:  # Vous pouvez ajuster cette valeur pour la difficulté
-			is_active = false
-			hide()
-			set_process(false)
-			emit_signal("mini_game_success")
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			current_angle += rotation_speed_indicator
+			print("Mouse wheel down, current angle: %f" % current_angle)
+		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			current_angle -= rotation_speed_indicator
+			print("Mouse wheel up, current angle: %f" % current_angle)
 
-func get_potentiometer_value():
-	return current_angle
+	if Input.is_action_just_pressed("validate"):  # Utilisation de l'action personnalisée "validate"
+		print("Validate action detected")
+		if is_active:
+			check_distance_lock()
+
+func check_distance_lock():
+	var angle_diff = abs(indicator.rotation_degrees - target_angle)
+	if angle_diff > 180.0:
+		angle_diff = 360.0 - angle_diff
+
+	print("Checking distance lock, angle difference: %f" % angle_diff)
+	if angle_diff <= flexibility:
+		print("Lock successful")
+		is_active = false
+		circle.hide()
+		indicator.hide()
+		set_process(false)
+		emit_signal("mini_game_success")
+	else:
+		print("Lock unsuccessful, angle difference: ", angle_diff)
+		is_active = false
+		circle.hide()
+		indicator.hide()
+		set_process(false)

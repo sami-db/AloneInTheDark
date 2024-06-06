@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://rcol8bue0073"]
+[gd_scene load_steps=3 format=3 uid="uid://fpnaquyfamov"]
 
 [ext_resource type="Script" path="res://scenes/scene_exemple_utilisation_arduino.gd" id="1_cktyf"]
 [ext_resource type="Texture2D" uid="uid://ceqjmtmcjio5o" path="res://icon.png" id="2_soki2"]

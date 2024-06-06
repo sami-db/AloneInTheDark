@@ -153,6 +153,7 @@ scale = Vector2(0.711957, 0.711957)
 theme_override_fonts/font = ExtResource("17_ojo1g")
 
 [node name="MiniGame" parent="." instance=ExtResource("18_84wwf")]
+z_index = 2
 offset_left = 13.0
 offset_top = -26.0
 offset_right = 53.0
