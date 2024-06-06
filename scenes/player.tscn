@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c2383u0jbk7y4"]
+[gd_scene load_steps=22 format=3 uid="uid://c2383u0jbk7y4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cw4h4vu03qnhn" path="res://assets/sprites/jump_0.png" id="2_e6x1o"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://dtxk5hi2g7vw" path="res://assets/sprites/run_07.png" id="14_xoiik"]
 [ext_resource type="Texture2D" uid="uid://boiink6vkm155" path="res://assets/sprites/run_08.png" id="15_2rms5"]
 [ext_resource type="Texture2D" uid="uid://co8nywbihkb7l" path="res://assets/texture/2d_lights_and_shadows_neutral_point_light.webp" id="16_5fonf"]
+[ext_resource type="FontFile" uid="uid://ce0yr85hkdf32" path="res://assets/fonts/PeaberryBase.ttf" id="17_ojo1g"]
+[ext_resource type="PackedScene" uid="uid://dau05a6j2ejib" path="res://scenes/mini_game.tscn" id="18_84wwf"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(20, 24)
@@ -111,7 +113,7 @@ shape = SubResource("1")
 [node name="animation" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("2")
-animation = &"doubleJump"
+animation = &"run"
 
 [node name="audio" type="AudioStreamPlayer" parent="."]
 
@@ -141,5 +143,21 @@ shadow_filter = 1
 shadow_filter_smooth = 16.9
 texture = ExtResource("16_5fonf")
 texture_scale = 1.5
+
+[node name="Label" type="Label" parent="."]
+offset_left = 14.0
+offset_top = -21.0
+offset_right = 54.0
+offset_bottom = 2.0
+scale = Vector2(0.711957, 0.711957)
+theme_override_fonts/font = ExtResource("17_ojo1g")
+
+[node name="MiniGame" parent="." instance=ExtResource("18_84wwf")]
+offset_left = 13.0
+offset_top = -26.0
+offset_right = 53.0
+offset_bottom = 14.0
+rotation = -0.0128102
+scale = Vector2(0.621296, 0.621296)
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

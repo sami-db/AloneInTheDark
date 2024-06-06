@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhe5n60jyrv78"]
+
+[ext_resource type="Texture2D" uid="uid://3xaavfln7e5g" path="res://assets/terrain/mainlev_build.png" id="1_6ala3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o82he"]
+size = Vector2(170, 17)
+
+[node name="Plateform" type="AnimatableBody2D"]
+position = Vector2(-173, -228)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(581, 538)
+texture = ExtResource("1_6ala3")
+region_enabled = true
+region_rect = Rect2(753.803, 15.0494, 172.64, 18.8282)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(581, 537.5)
+shape = SubResource("RectangleShape2D_o82he")
+one_way_collision = true

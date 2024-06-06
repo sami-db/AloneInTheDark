@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dau05a6j2ejib"]
+
+[ext_resource type="Script" path="res://scripts/mini_game.gd" id="1_24tpl"]
+[ext_resource type="Texture2D" uid="uid://c53y7eocle3i7" path="res://assets/sprites/interface/circle.png" id="1_womse"]
+[ext_resource type="Texture2D" uid="uid://bo2u7huhjx80d" path="res://assets/sprites/interface/indicator.png" id="2_cnb5l"]
+
+[node name="MiniGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_24tpl")
+
+[node name="Circle" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_womse")
+
+[node name="Indicator" type="TextureRect" parent="Circle"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_cnb5l")

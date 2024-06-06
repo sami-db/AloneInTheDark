@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://shadamp5ujm"]
+[gd_scene load_steps=13 format=3 uid="uid://shadamp5ujm"]
 
 [ext_resource type="PackedScene" uid="uid://c2383u0jbk7y4" path="res://scenes/player.tscn" id="2_lf65l"]
 [ext_resource type="Texture2D" uid="uid://bf1ju1htm0xf2" path="res://assets/sprites/object/smalltorchOFF.png" id="4_pdm7o"]
@@ -7,26 +7,78 @@
 [ext_resource type="Texture2D" uid="uid://fysn7f12xa8" path="res://assets/backgrounds/background2.png" id="7_yi2ra"]
 [ext_resource type="PackedScene" uid="uid://ckk75xu5ptamg" path="res://scenes/lamp.tscn" id="8_atvf7"]
 [ext_resource type="Texture2D" uid="uid://bkr6miv8qocxr" path="res://assets/backgrounds/background1.png" id="8_fl6om"]
-[ext_resource type="PackedScene" uid="uid://dhe5n60jyrv78" path="res://scenes/platform.tscn" id="9_me6dp"]
 [ext_resource type="Texture2D" uid="uid://cryhrp70i2174" path="res://assets/backgrounds/background4a.png" id="9_tijtv"]
 
 [sub_resource type="GDScript" id="GDScript_qyhv6"]
-script/source = "extends Node
+script/source = "# Je suis un commentaire ! Je n'ai pas d'effet sur l'execution du code
+# Quand vous aurez lu tous mes commentaires, vous pouvez les effacer, ce script n'a que ~35 lignes de vrai code
 
-var total_lampes: int = 0
+# Cette ligne permet à Godot de savoir de quelle classe Global Godot votre fichier script hérite
+extends Node2D
 
+# Ici j'ai créé la déclaration d'une variable nommée \"message_de_bienvenu\" qui comprends la string \"Bonjour!\"
+
+# La fonction _ready est une fonction de Godot appelée automatiquement lorsque le node entre dans le scène pour la première fois (souvent au début du jeu)
+# Généralement, si le nom d'une fonction commence par un underscore, c'est une fonction qui appartient à Godot, et qui est appelée automatiquement dans certaines situations
 func _ready():
-	# Compter toutes les lampes dans la scène
-	var lampes = get_tree().get_nodes_in_group(\"lampes\")
-	total_lampes = lampes.size()
+	# print(\"quelque chose\") est une fonction Godot  qui permet d'afficher des messages dans la console
+	# la console de Godot est accéssible en cliquant sur \"Output\" (\"Sortie\") en bas de votre écran
+	# Ici j'affiche dans la console le contenu de la variable \"message_de_bienvenu\" (\"Bonjour!\")
+	
+	# Sans cette ligne, Godot ne lira pas le MIDI	
+	# Une boucle qui liste et affiche tous les appareil MIDI connecté à l'ordinateur
+	# \"get_connected_midi_inputs\" est une fonction de Godot qui appartient à OS (qui est aussi une variable de Godot)
+	for current_midi_input in OS.get_connected_midi_inputs( ):
+		print(current_midi_input)
 
-	# Connecter le signal de chaque lampe à la fonction _on_lampe_allumee du joueur
-	var player = get_node(\"player\")
-	for lampe in lampes:
-		lampe.connect(\"lampe_allumee\", Callable(player, \"_on_lampe_allumee\"))
 
-	# Initialiser le compteur de lampes dans le joueur
-	player.init_lampes(total_lampes)
+# \"_input\" est appelée automatiquement chaque fois qu'un événement d'entrée (input) est détecté dans la scène de jeu
+# \"event\" est ce que Godot envoie en paramêtre de \"_input\", une variable contenant toutes les infos de l'événement
+# Plus d'infos ici: https://docs.godotengine.org/fr/stable/tutorials/inputs/input_examples.html
+func _input(event):
+	# Si cet événement est du MIDI:
+	if event is InputEventMIDI:
+		# si l'événement est du MIDI, il contiendra toutes les informations classique du MIDI (message, pitch, instrument, etc.)
+		# Pour plus d'info sur le MIDI, voir notre cours \"2 - IoT - Musique éléctonique et MIDI\" 
+		# Donc si on print event.pitch, on affichera le code de la note MIDI:
+		print(event.pitch)
+		
+		# Ici j'appelle ma fonction \"traiter_evenement_midi\" en lui passant l'event en paramêtre.
+		# Le détail de la fonction se trouve plus bas
+		traiter_evenement_midi(event)
+		
+
+func traiter_evenement_midi(event_midi):
+	# Si la varible \"message\" contenu dans la variable \"event\" = \"MIDI_MESSAGE_NOTE_ON\" (voir \"NOTE ON\" dans notre cours)
+	# En d'autres termes: \"si l'événement midi a été déclenchée par une note qui vient d'être pressée\"
+	if event_midi.message == MIDI_MESSAGE_NOTE_ON:
+		print(\"NOTE_ON\")
+		# \"Si la note de l'événement MIDI est 48\"
+		if event_midi.pitch == 48:
+			# Appeler ma fonctionner \"activer_objet\" en lui passant 48 en paramètres
+			# voir le détail de la fonction plus bas
+			activer_objet(48)
+		# \"Sinon si la note de l'événement MIDI est 50\"
+		elif event_midi.pitch == 50:
+			# Pareil avec 50 en paramètres
+			activer_objet(50)
+
+	# \"sinon si l'événement midi a été déclenchée par une note qui vient d'être relachée\"
+	elif event_midi.message == MIDI_MESSAGE_NOTE_OFF:
+		print(\"NOTE_OFF\")
+
+
+# Fonction qui active du son, des particules et un effet visuel de l'objet A ou B selon la note jouée (ici 48 ou 50)
+func activer_objet(note):
+	if note == 48:
+		# On va chercher le node enfant \"Conteneur_Objet_A\" et on active la fonction \"effet_objet\" qu'il contient
+		# la fonction \"effet_objet\" se trouve dans le script attaché à \"Conteneur_Objet_A\"
+		$player.move_left()
+	if note == 50:
+		# Pareil pour \"Conteneur_Objet_B\" 
+		$player.move_right()
+
+
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eii5w"]
@@ -2884,39 +2936,20 @@ scale = Vector2(1.1, 1.343)
 texture = ExtResource("9_tijtv")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 position = Vector2(-0.611298, 0)
 color = Color(0, 0, 0, 1)
 
-[node name="Lamp" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp" parent="." instance=ExtResource("8_atvf7")]
 position = Vector2(2.44517, 0)
 
-[node name="Lamp2" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp2" parent="." instance=ExtResource("8_atvf7")]
 position = Vector2(-152.212, -288)
 
-[node name="Lamp3" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp3" parent="." instance=ExtResource("8_atvf7")]
 position = Vector2(451.133, -240)
 
-[node name="Lamp4" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp4" parent="." instance=ExtResource("8_atvf7")]
 position = Vector2(232.291, -240)
 
-[node name="Lamp5" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp5" parent="." instance=ExtResource("8_atvf7")]
 position = Vector2(565.445, -32)
-
-[node name="Lamp6" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
-position = Vector2(312.981, 0)
-
-[node name="Lamp7" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
-position = Vector2(88.6373, -166.667)
-
-[node name="Plateform" parent="." instance=ExtResource("9_me6dp")]
-position = Vector2(-4.89034, -30.6667)
-scale = Vector2(0.497078, 0.497078)
-
-[node name="Plateform2" parent="." instance=ExtResource("9_me6dp")]
-position = Vector2(144.265, 5.33334)
-scale = Vector2(0.497078, 0.497078)
-
-[node name="Plateform3" parent="." instance=ExtResource("9_me6dp")]
-position = Vector2(194.391, -58)
-scale = Vector2(0.497078, 0.497078)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://shadamp5ujm"]
+[gd_scene load_steps=13 format=3 uid="uid://shadamp5ujm"]
 
 [ext_resource type="PackedScene" uid="uid://c2383u0jbk7y4" path="res://scenes/player.tscn" id="2_lf65l"]
 [ext_resource type="Texture2D" uid="uid://bf1ju1htm0xf2" path="res://assets/sprites/object/smalltorchOFF.png" id="4_pdm7o"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://fysn7f12xa8" path="res://assets/backgrounds/background2.png" id="7_yi2ra"]
 [ext_resource type="PackedScene" uid="uid://ckk75xu5ptamg" path="res://scenes/lamp.tscn" id="8_atvf7"]
 [ext_resource type="Texture2D" uid="uid://bkr6miv8qocxr" path="res://assets/backgrounds/background1.png" id="8_fl6om"]
-[ext_resource type="PackedScene" uid="uid://dhe5n60jyrv78" path="res://scenes/platform.tscn" id="9_me6dp"]
 [ext_resource type="Texture2D" uid="uid://cryhrp70i2174" path="res://assets/backgrounds/background4a.png" id="9_tijtv"]
 
 [sub_resource type="GDScript" id="GDScript_qyhv6"]
@@ -16,17 +15,17 @@ script/source = "extends Node
 var total_lampes: int = 0
 
 func _ready():
-	# Compter toutes les lampes dans la scène
-	var lampes = get_tree().get_nodes_in_group(\"lampes\")
-	total_lampes = lampes.size()
+    # Compter toutes les lampes dans la scène
+    var lampes = get_tree().get_nodes_in_group(\"lampes\")
+    total_lampes = lampes.size()
 
-	# Connecter le signal de chaque lampe à la fonction _on_lampe_allumee du joueur
-	var player = get_node(\"player\")
-	for lampe in lampes:
-		lampe.connect(\"lampe_allumee\", Callable(player, \"_on_lampe_allumee\"))
+    # Connecter le signal de chaque lampe à la fonction _on_lampe_allumee du joueur
+    var player = get_node(\"player\")
+    for lampe in lampes:
+        lampe.connect(\"lampe_allumee\", Callable(player, \"_on_lampe_allumee\"))
 
-	# Initialiser le compteur de lampes dans le joueur
-	player.init_lampes(total_lampes)
+    # Initialiser le compteur de lampes dans le joueur
+    player.init_lampes(total_lampes)
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eii5w"]
@@ -2844,6 +2843,10 @@ script = SubResource("GDScript_qyhv6")
 [node name="player" parent="." instance=ExtResource("2_lf65l")]
 z_index = 1
 position = Vector2(39.1227, 288)
+audio_jump = null
+speed = null
+jump_height = null
+time_jump_apex = null
 
 [node name="bgmusic" type="AudioStreamPlayer" parent="."]
 autoplay = true
@@ -2884,39 +2887,20 @@ scale = Vector2(1.1, 1.343)
 texture = ExtResource("9_tijtv")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 position = Vector2(-0.611298, 0)
 color = Color(0, 0, 0, 1)
 
-[node name="Lamp" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp" parent="." instance=ExtResource("8_atvf7")]
 position = Vector2(2.44517, 0)
 
-[node name="Lamp2" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp2" parent="." instance=ExtResource("8_atvf7")]
 position = Vector2(-152.212, -288)
 
-[node name="Lamp3" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp3" parent="." instance=ExtResource("8_atvf7")]
 position = Vector2(451.133, -240)
 
-[node name="Lamp4" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp4" parent="." instance=ExtResource("8_atvf7")]
 position = Vector2(232.291, -240)
 
-[node name="Lamp5" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp5" parent="." instance=ExtResource("8_atvf7")]
 position = Vector2(565.445, -32)
-
-[node name="Lamp6" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
-position = Vector2(312.981, 0)
-
-[node name="Lamp7" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
-position = Vector2(88.6373, -166.667)
-
-[node name="Plateform" parent="." instance=ExtResource("9_me6dp")]
-position = Vector2(-4.89034, -30.6667)
-scale = Vector2(0.497078, 0.497078)
-
-[node name="Plateform2" parent="." instance=ExtResource("9_me6dp")]
-position = Vector2(144.265, 5.33334)
-scale = Vector2(0.497078, 0.497078)
-
-[node name="Plateform3" parent="." instance=ExtResource("9_me6dp")]
-position = Vector2(194.391, -58)
-scale = Vector2(0.497078, 0.497078)

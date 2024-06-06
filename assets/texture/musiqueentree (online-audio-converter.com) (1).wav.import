@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bubtdmv2eyj6m"
+path="res://.godot/imported/musiqueentree (online-audio-converter.com) (1).wav-5f426e9cf6c6d118b6161aa09a8df8a4.sample"
+
+[deps]
+
+source_file="res://assets/texture/musiqueentree (online-audio-converter.com) (1).wav"
+dest_files=["res://.godot/imported/musiqueentree (online-audio-converter.com) (1).wav-5f426e9cf6c6d118b6161aa09a8df8a4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
