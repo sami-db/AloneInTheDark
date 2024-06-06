@@ -10,6 +10,7 @@ func _ready():
 
 func _process(delta):
 	$Label.visible = showInteractionLabel
+	$SpriteButton.visible = showInteractionLabel
 	
 	if showInteractionLabel and Input.is_action_just_pressed("activate_lamp") and not est_allumee:
 		start_mini_game()

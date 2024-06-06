@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ckk75xu5ptamg"]
+[gd_scene load_steps=16 format=3 uid="uid://ckk75xu5ptamg"]
 
 [ext_resource type="Texture2D" uid="uid://bf1ju1htm0xf2" path="res://assets/sprites/object/smalltorchOFF.png" id="1_5eqnh"]
 [ext_resource type="Script" path="res://scripts/lamp.gd" id="1_w7fsu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cf0qveamm0jpe" path="res://assets/sprites/object/smalltorch1.png" id="5_jyq3y"]
 [ext_resource type="Texture2D" uid="uid://cwnonbgkc1up7" path="res://assets/sprites/object/smalltorch2.png" id="6_xk0n8"]
 [ext_resource type="Texture2D" uid="uid://bxh5ga21o5n4f" path="res://assets/sprites/object/smalltorch3.png" id="7_mrn03"]
+[ext_resource type="Texture2D" uid="uid://hx73fsuc3yk8" path="res://assets/sprites/interface/red_button.png" id="8_fkdkv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x7r5w"]
 size = Vector2(13.1675, 39.5295)
@@ -146,11 +147,11 @@ scale = Vector2(0.882057, 0.708333)
 shape = SubResource("RectangleShape2D_x7r5w")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 159.0
-offset_top = 366.0
-offset_right = 291.0
-offset_bottom = 389.0
-scale = Vector2(0.331869, 0.343885)
+offset_left = 157.0
+offset_top = 363.0
+offset_right = 289.0
+offset_bottom = 386.0
+scale = Vector2(0.405388, 0.420066)
 theme_override_fonts/font = ExtResource("4_qmpgv")
 text = "[E] to interact"
 
@@ -167,6 +168,11 @@ texture = ExtResource("4_xnrid")
 libraries = {
 "": SubResource("AnimationLibrary_78unm")
 }
+
+[node name="SpriteButton" type="Sprite2D" parent="."]
+position = Vector2(161, 366)
+scale = Vector2(0.473272, 0.490407)
+texture = ExtResource("8_fkdkv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

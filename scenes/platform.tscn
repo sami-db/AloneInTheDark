@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o82he"]
 size = Vector2(170, 17)
 
-[node name="Plateform" type="AnimatableBody2D"]
+[node name="Plateform" type="AnimatableBody2D" groups=["passable_platforms"]]
 position = Vector2(-173, -228)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,7 +14,7 @@ texture = ExtResource("1_6ala3")
 region_enabled = true
 region_rect = Rect2(753.803, 15.0494, 172.64, 18.8282)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["passable_plateforms"]]
 position = Vector2(581, 537.5)
 shape = SubResource("RectangleShape2D_o82he")
 one_way_collision = true

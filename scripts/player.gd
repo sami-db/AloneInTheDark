@@ -1,8 +1,6 @@
 extends CharacterBody2D
 class_name Player
 
-@export var audio_jump: AudioStream = preload("res://sounds/jump.wav")
-
 @export var speed: float = 90.0
 @export var jump_height: float = 65.0
 @export var time_jump_apex: float = 0.4
@@ -18,7 +16,8 @@ var current_lamp = null
 
 var total_lampes: int = 0
 var lampes_allumees: int = 0
-var label_timer: Timer
+
+var can_move: bool = true  # Variable pour contrôler le mouvement du joueur
 
 func _ready():
 	# Calculer la gravité et la force de saut au démarrage
@@ -27,16 +26,10 @@ func _ready():
 
 	# Initialiser le label et le timer
 	$Label.visible = false
-	label_timer = Timer.new()
-	label_timer.wait_time = 2.0  # Durée d'affichage en secondes
-	label_timer.one_shot = true
-	label_timer.connect("timeout", Callable(self, "_on_label_timer_timeout"))
-	add_child(label_timer)
 	
 	# Cacher le mini-jeu au démarrage
-	#mini_game.hide()
 	mini_game.connect("mini_game_success", Callable(self, "_on_mini_game_success"))
-	mini_game.z_index = 100  # S'assurer que le mini-jeu est rendu au-dessus des autres éléments
+	mini_game.connect("mini_game_failed", Callable(self, "_on_mini_game_failed"))  # Connecter le signal d'échec
 	print("Player ready")
 	print("MiniGame visibility: ", mini_game.visible)
 
@@ -48,7 +41,7 @@ func _on_lampe_allumee():
 	lampes_allumees += 1
 	update_label()
 	$Label.visible = true
-	label_timer.start()
+	get_tree().create_timer(2.0).connect("timeout", Callable(self, "_on_label_timer_timeout"))
 
 func update_label():
 	$Label.text = "%d/%d" % [lampes_allumees, total_lampes]
@@ -58,16 +51,22 @@ func _on_label_timer_timeout():
 
 func _physics_process(delta: float):
 	velocity.y += gravity * delta
-	
-	if Input.is_action_pressed("ui_left"):
-		move_left()
-	elif Input.is_action_pressed("ui_right"):
-		move_right()
+
+	if can_move:
+		if Input.is_action_pressed("ui_left"):
+			move_left()
+		elif Input.is_action_pressed("ui_right"):
+			move_right()
+		else:
+			velocity.x = 0
+
+		if Input.is_action_just_pressed("ui_up"):
+			jump()
+
+		if Input.is_action_just_pressed("move_down") and on_ground:
+			move_down()
 	else:
 		velocity.x = 0
-	
-	if Input.is_action_just_pressed("ui_up"):
-		jump()
 
 	move_and_slide()
 
@@ -100,14 +99,9 @@ func move_left():
 
 func jump():
 	if on_ground:
-		if $check_platform.is_colliding() and Input.is_action_pressed("ui_down"):
-			set_collision_layer_value(2, false)
-		else:
-			velocity.y = -jump_force
-			on_ground = false
-			$audio.stream = audio_jump
-			$audio.play()
-			can_double_jump = true
+		velocity.y = -jump_force
+		on_ground = false
+		can_double_jump = true
 	else:
 		if can_double_jump:
 			velocity.y = -jump_force
@@ -117,16 +111,25 @@ func jump():
 func _on_Area2D_body_exited(body: Node):
 	set_collision_layer_value(2, true)
 
+func move_down():
+	# Déplacer le joueur de 1 pixel vers le bas
+	position.y += 1
+	print("Moved down")
+
 func start_mini_game(lamp):
 	current_lamp = lamp
-	mini_game.set_position(position + Vector2(100, 0))  # Positionner le mini-jeu à droite du joueur
+	can_move = false  # Désactiver le mouvement du joueur
 	mini_game.show()
 	mini_game.start_mini_game(lamp)
-	print("Mini-game position: %s" % str(mini_game.global_position))
+	print("Mini-game position: %s" % str(mini_game.position))
 	print("MiniGame visibility après show: ", mini_game.visible)
 	print("MiniGame Z-Index: ", mini_game.z_index)
 
 func _on_mini_game_success():
+	can_move = true  # Réactiver le mouvement du joueur
 	if current_lamp != null:
 		current_lamp.allumer_lampe()
 		current_lamp = null
+
+func _on_mini_game_failed():
+	can_move = true  # Réactiver le mouvement du joueur en cas d'échec
