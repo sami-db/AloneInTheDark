@@ -6,6 +6,7 @@ class_name Player
 @export var time_jump_apex: float = 0.4
 
 @onready var mini_game = $MiniGame
+@onready var animation_player = $animation  # Assurez-vous que ce chemin est correct pour votre AnimationPlayer
 
 var gravity: float
 var jump_force: float
@@ -17,7 +18,7 @@ var current_lamp = null
 var total_lampes: int = 0
 var lampes_allumees: int = 0
 
-var can_move: bool = true  # Variable pour contrôler le mouvement du joueur
+var can_move: bool = false  # Variable pour contrôler le mouvement du joueur, désactivée par défaut
 
 func _ready():
 	# Calculer la gravité et la force de saut au démarrage
@@ -91,11 +92,11 @@ func _physics_process(delta: float):
 
 func move_right():
 	velocity.x = speed
-	$animation.flip_h = false
+	$animation.flip_h = false  # Ajoutez cette ligne pour assurer que le sprite est orienté correctement vers la droite
 
 func move_left():
 	velocity.x = -speed
-	$animation.flip_h = true
+	$animation.flip_h = true  # Ajoutez cette ligne pour retourner le sprite vers la gauche
 
 func jump():
 	if on_ground:
