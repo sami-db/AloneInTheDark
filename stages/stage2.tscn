@@ -5849,13 +5849,13 @@ offset_bottom = 497.0
 color = Color(0.0142752, 0.0142752, 0.0142752, 1)
 
 [node name="Sprite2D6" type="Sprite2D" parent="."]
-position = Vector2(454, 72)
+position = Vector2(358.405, 71.4053)
 rotation = -2.36316
 scale = Vector2(0.65657, 0.65657)
 texture = ExtResource("11_logug")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(449, 79)
+position = Vector2(353.405, 78.4053)
 rotation = 0.185221
 texture = ExtResource("12_fj4n6")
 texture_scale = 11.51
@@ -5865,15 +5865,15 @@ position = Vector2(-0.611298, 0)
 color = Color(0, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(425, 384)
+position = Vector2(-81, 388)
 scale = Vector2(0.0116756, 0.0142548)
 texture = ExtResource("14_n83a3")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 384.0
-offset_top = 359.0
-offset_right = 541.0
-offset_bottom = 382.0
+offset_left = -122.0
+offset_top = 363.0
+offset_right = 35.0
+offset_bottom = 386.0
 scale = Vector2(0.519875, 0.519875)
 theme_override_fonts/font = ExtResource("15_u414v")
 text = "Forest exit"
@@ -5888,6 +5888,9 @@ zoom = Vector2(1.3, 1.3)
 [node name="player" parent="." instance=ExtResource("2_rkgje")]
 z_index = 1
 position = Vector2(-284, 368)
+speed = 90.0
+jump_height = 65.0
+time_jump_apex = 0.4
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

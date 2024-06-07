@@ -22,10 +22,10 @@ public partial class Arduino_Manager : Node2D
 	public int potentiometreDeux;
 	public int potentiometreTrois;
 
-	public int boutonUn;
-	public int boutonDeux;
-	public int boutonTrois;
-	public int boutonQuatre;
+	public int boutonBleu;
+	public int boutonBlanc;
+	public int boutonRouge;
+	public int boutonNoir;
 
 	public int piezzoUn;
 	public int piezzoDeux;
@@ -61,16 +61,16 @@ public partial class Arduino_Manager : Node2D
 				//GD.Print($"<{valeur}>"); // A COMMENTER
 			}
 			
-			boutonUn = Int32.Parse(tableauValeurs[0]);
-			boutonDeux = Int32.Parse(tableauValeurs[1]);
-			boutonTrois = Int32.Parse(tableauValeurs[2]);
-			boutonQuatre = Int32.Parse(tableauValeurs[3]);
+			boutonBleu = Int32.Parse(tableauValeurs[0]);
+			boutonBlanc = Int32.Parse(tableauValeurs[1]);
+			boutonRouge = Int32.Parse(tableauValeurs[2]);
+			boutonNoir = Int32.Parse(tableauValeurs[3]);
 			potentiometreUn = Int32.Parse(tableauValeurs[4]);
 			
-			GD.Print(boutonUn);
-			GD.Print(boutonDeux);
-			GD.Print(boutonTrois);
-			GD.Print(boutonQuatre);
+			GD.Print(boutonBleu);
+			GD.Print(boutonBlanc);
+			GD.Print(boutonRouge);
+			GD.Print(boutonNoir);
 			GD.Print(potentiometreUn);
 			
 			currentTime = Time.GetTicksMsec();
@@ -87,7 +87,7 @@ public partial class Arduino_Manager : Node2D
 		serialPort = new SerialPort();
 		serialPort.DtrEnable = true;
 		serialPort.RtsEnable = true;
-		serialPort.PortName = "COM3"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
+		serialPort.PortName = "COM5"; //Vous devez vérifier sur l'IDE arduino le bon port COM et l'écrire à la main.
 		serialPort.BaudRate = 115200; //Vous devez choisir un baudrate et celui-ci doit être le même dans Arduino.
 		serialPort.Open();
 		if(serialPort != null && serialPort.IsOpen){

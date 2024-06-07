@@ -2880,6 +2880,9 @@ layer_1/tile_data = PackedInt32Array(1572871, 589824, 33, 1638407, 589824, 31, 1
 
 [node name="player" parent="." instance=ExtResource("2_rkgje")]
 position = Vector2(294, 397)
+speed = 90.0
+jump_height = 65.0
+time_jump_apex = 0.4
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(427, 284)

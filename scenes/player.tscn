@@ -181,4 +181,7 @@ scale = Vector2(0.621296, 0.621296)
 stream = ExtResource("23_t7b5o")
 volume_db = -10.0
 
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
+
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
