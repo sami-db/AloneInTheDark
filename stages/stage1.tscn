@@ -2905,7 +2905,6 @@ position = Vector2(39.1227, 288)
 
 [node name="bgmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_2n8d6")
-volume_db = -40.0
 autoplay = true
 
 [node name="TileMap" type="TileMap" parent="."]

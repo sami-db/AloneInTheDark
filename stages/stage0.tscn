@@ -946,6 +946,7 @@ texture = ExtResource("2_mjbgd")
 27:20/0 = 0
 27:20/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 27:20/0/physics_layer_0/angular_velocity = 0.0
+27:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 28:20/0 = 0
 28:20/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 28:20/0/physics_layer_0/angular_velocity = 0.0
@@ -976,6 +977,7 @@ texture = ExtResource("2_mjbgd")
 27:21/0 = 0
 27:21/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 27:21/0/physics_layer_0/angular_velocity = 0.0
+27:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 28:21/0 = 0
 28:21/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 28:21/0/physics_layer_0/angular_velocity = 0.0
@@ -2880,9 +2882,6 @@ layer_1/tile_data = PackedInt32Array(1572871, 589824, 33, 1638407, 589824, 31, 1
 
 [node name="player" parent="." instance=ExtResource("2_rkgje")]
 position = Vector2(294, 397)
-speed = 90.0
-jump_height = 65.0
-time_jump_apex = 0.4
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(427, 284)
@@ -3021,7 +3020,6 @@ vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_6obnr")
-volume_db = -40.0
 autoplay = true
 
 [node name="Door" parent="." instance=ExtResource("19_p41et")]
