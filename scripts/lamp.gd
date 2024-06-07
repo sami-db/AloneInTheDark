@@ -24,7 +24,9 @@ func _on_body_exited(body):
 		showInteractionLabel = false
 
 func start_mini_game():
-	var player = get_node("/root/world/player")  # Assurez-vous que le chemin est correct
+	var player = get_node_or_null("/root/world/player")
+	if player == null:
+		player = get_node_or_null("/root/Stage1/player")
 	if player == null:
 		print("Erreur : Impossible de trouver le nœud Player")
 		return
