@@ -17,6 +17,7 @@ shape = SubResource("RectangleShape2D_vf7c0")
 
 [node name="DoorSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_3xbu7")
+volume_db = 24.0
 
 [node name="InteractionLabel" type="Label" parent="."]
 offset_left = -6.08409
