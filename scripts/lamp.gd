@@ -7,6 +7,7 @@ var est_allumee = false
 
 func _ready():
 	$PointLight2D.visible = false
+	add_to_group("lamps")
 
 func _process(delta):
 	$Label.visible = showInteractionLabel
@@ -24,9 +25,9 @@ func _on_body_exited(body):
 		showInteractionLabel = false
 
 func start_mini_game():
-	var player = get_node_or_null("/root/world/player")
+	var player = get_node_or_null("/root/Stage1/player")
 	if player == null:
-		player = get_node_or_null("/root/Stage1/player")
+		player = get_node_or_null("/root/world/player")
 	if player == null:
 		print("Erreur : Impossible de trouver le nœud Player")
 		return

@@ -2880,6 +2880,9 @@ layer_1/tile_data = PackedInt32Array(1572871, 589824, 33, 1638407, 589824, 31, 1
 
 [node name="player" parent="." instance=ExtResource("2_rkgje")]
 position = Vector2(294, 397)
+speed = null
+jump_height = null
+time_jump_apex = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(427, 284)
@@ -2910,6 +2913,7 @@ texture = ExtResource("8_80g1a")
 texture_scale = 1.5
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2(-0.611298, 0)
 color = Color(0, 0, 0, 1)
 
@@ -2958,7 +2962,7 @@ text = "ALONE IN THE DARK
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Lamp" parent="." groups=["lamps"] instance=ExtResource("14_nsxaq")]
+[node name="Lamp" parent="." groups=["lampes"] instance=ExtResource("14_nsxaq")]
 position = Vector2(275, 1)
 
 [node name="forward" type="Label" parent="."]
@@ -3021,6 +3025,5 @@ stream = ExtResource("18_6obnr")
 volume_db = -40.0
 autoplay = true
 
-[node name="Door" parent="." instance=ExtResource("19_p41et")]
+[node name="Area2D" parent="." instance=ExtResource("19_p41et")]
 position = Vector2(673, 336)
-next_scene = "res://stages/stage2.tscn"

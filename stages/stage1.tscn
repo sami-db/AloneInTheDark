@@ -23,14 +23,20 @@ func _ready():
 	total_lampes = lampes.size()
 
 	# Connecter le signal de chaque lampe à la fonction _on_lampe_allumee du joueur
-	var player = get_node(\"player\")
-	for lampe in lampes:
-		lampe.connect(\"lampe_allumee\", Callable(player, \"_on_lampe_allumee\"))
+	var player = get_node_or_null(\"player\")
+	if player == null:
+		player = get_node_or_null(\"/root/world/player\")
+	
+	if player:
+		for lampe in lampes:
+			lampe.connect(\"lampe_allumee\", Callable(player, \"_on_lampe_allumee\"))
 
-	# Initialiser le compteur de lampes dans le joueur
-	player.init_lampes(total_lampes)
+		# Initialiser le compteur de lampes dans le joueur
+		player.init_lampes()
 
-	player.can_move = true  # Réactiver les contrôles du joueur
+		player.can_move = true  # Réactiver les contrôles du joueur
+	else:
+		print(\"Erreur : Impossible de trouver le nœud Player dans aucun des chemins\")
 "
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eii5w"]
@@ -2890,29 +2896,28 @@ scale = Vector2(1.1, 1.343)
 texture = ExtResource("9_tijtv")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 position = Vector2(-0.611298, 0)
 color = Color(0, 0, 0, 1)
 
-[node name="Lamp" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp" parent="." groups=["lamps"] instance=ExtResource("8_atvf7")]
 position = Vector2(2.44517, 0)
 
-[node name="Lamp2" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp2" parent="." groups=["lamps"] instance=ExtResource("8_atvf7")]
 position = Vector2(-152.212, -288)
 
-[node name="Lamp3" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp3" parent="." groups=["lamps"] instance=ExtResource("8_atvf7")]
 position = Vector2(451.133, -240)
 
-[node name="Lamp4" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp4" parent="." groups=["lamps"] instance=ExtResource("8_atvf7")]
 position = Vector2(232.291, -240)
 
-[node name="Lamp5" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp5" parent="." groups=["lamps"] instance=ExtResource("8_atvf7")]
 position = Vector2(565.445, -32)
 
-[node name="Lamp6" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp6" parent="." groups=["lamps"] instance=ExtResource("8_atvf7")]
 position = Vector2(312.981, 0)
 
-[node name="Lamp7" parent="." groups=["lampes"] instance=ExtResource("8_atvf7")]
+[node name="Lamp7" parent="." groups=["lamps"] instance=ExtResource("8_atvf7")]
 position = Vector2(88.6373, -166.667)
 
 [node name="Plateform" parent="." instance=ExtResource("9_me6dp")]
@@ -2927,5 +2932,5 @@ scale = Vector2(0.497078, 0.497078)
 position = Vector2(194.391, -58)
 scale = Vector2(0.497078, 0.497078)
 
-[node name="Area2D" parent="." instance=ExtResource("11_t6dyt")]
+[node name="Door" parent="." instance=ExtResource("11_t6dyt")]
 position = Vector2(609.458, 286)

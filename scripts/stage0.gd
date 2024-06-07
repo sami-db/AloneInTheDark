@@ -1,7 +1,5 @@
 extends Node2D
 
-
-# Références aux nœuds à masquer
 @onready var forward_label = $forward
 @onready var backward_label = $backward
 @onready var jump_label = $jump
@@ -17,7 +15,7 @@ extends Node2D
 @onready var player = $player  # Assurez-vous que ce chemin est correct pour votre joueur
 @onready var spawn_sprite = $SpawnSprite  # Le sprite ou AnimationPlayer pour l'animation de spawn
 @onready var point_light = $Node2D/PointLight2D  # Assurez-vous que ce chemin est correct pour votre PointLight2D
-@onready var door = $Door  # Référence à la porte
+@onready var door = $Door  # Référence à la porte (mettre à jour si nécessaire)
 
 var total_lampes: int = 0
 
@@ -30,7 +28,7 @@ func _ready():
 		print("Player, AnimationPlayer, SpawnSprite, and PointLight2D found")
 		disable_player_point_lights()
 		player.visible = false  # Masquer le joueur au début
-		hide_all_labels() 
+		hide_all_labels()
 		point_light.visible = true  # Activer le PointLight2D au début
 		start_spawn_animation()
 	else:
@@ -77,7 +75,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 func init_lampes():
 	# Compter toutes les lampes dans la scène
-	var lampes = get_tree().get_nodes_in_group("lampes")
+	var lampes = get_tree().get_nodes_in_group("lamps")
 	total_lampes = lampes.size()
 
 	# Connecter le signal de chaque lampe à la fonction _on_lampe_allumee du joueur
@@ -85,11 +83,15 @@ func init_lampes():
 		lampe.connect("lampe_allumee", Callable(player, "_on_lampe_allumee"))
 
 	# Initialiser le compteur de lampes dans le joueur
-	player.init_lampes(total_lampes)
+	player.init_lampes()
 
 	# Connecter le signal de fin d'allumage des lampes
-	player.connect("lampes_allumee", Callable(self, "_on_all_lampes_allumee"))
+	player.connect("all_lamps_on", Callable(self, "_on_all_lampes_allumee"))
 
 func _on_all_lampes_allumee():
-	door.play_door_sound()
-	door.enable_transition()
+	if door:
+		print("All lamps are on, door should open now.")
+		door.play_door_sound()
+		door.enable_transition()
+	else:
+		print("Erreur : le nœud Door est introuvable.")

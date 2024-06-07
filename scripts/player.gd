@@ -20,22 +20,27 @@ var lampes_allumees: int = 0
 
 var can_move: bool = false  # Variable pour contrôler le mouvement du joueur, désactivée par défaut
 
+signal all_lamps_on
+
 func _ready():
-	# Calculer la gravité et la force de saut au démarrage
 	gravity = (2 * jump_height) / pow(time_jump_apex, 2)
 	jump_force = gravity * time_jump_apex
 
-	# Initialiser le label et le timer
 	$Label.visible = false
 	
-	# Cacher le mini-jeu au démarrage
 	mini_game.connect("mini_game_success", Callable(self, "_on_mini_game_success"))
 	mini_game.connect("mini_game_failed", Callable(self, "_on_mini_game_failed"))  # Connecter le signal d'échec
 	print("Player ready")
 	print("MiniGame visibility: ", mini_game.visible)
 
-func init_lampes(total: int):
-	total_lampes = total
+	# Connecter toutes les lampes
+	init_lampes()
+
+func init_lampes():
+	var lamps = get_tree().get_nodes_in_group("lamps")
+	total_lampes = lamps.size()
+	for lamp in lamps:
+		lamp.connect("lampe_allumee", Callable(self, "_on_lampe_allumee"))
 	update_label()
 
 func _on_lampe_allumee():
@@ -43,6 +48,9 @@ func _on_lampe_allumee():
 	update_label()
 	$Label.visible = true
 	get_tree().create_timer(2.0).connect("timeout", Callable(self, "_on_label_timer_timeout"))
+	if lampes_allumees == total_lampes:
+		print("All lamps are on")
+		emit_signal("all_lamps_on")
 
 func update_label():
 	$Label.text = "%d/%d" % [lampes_allumees, total_lampes]
@@ -92,11 +100,11 @@ func _physics_process(delta: float):
 
 func move_right():
 	velocity.x = speed
-	$animation.flip_h = false  # Ajoutez cette ligne pour assurer que le sprite est orienté correctement vers la droite
+	$animation.flip_h = false  # Assurez-vous que le sprite est orienté correctement vers la droite
 
 func move_left():
 	velocity.x = -speed
-	$animation.flip_h = true  # Ajoutez cette ligne pour retourner le sprite vers la gauche
+	$animation.flip_h = true  # Retourner le sprite vers la gauche
 
 func jump():
 	if on_ground:
@@ -113,7 +121,6 @@ func _on_Area2D_body_exited(body: Node):
 	set_collision_layer_value(2, true)
 
 func move_down():
-	# Déplacer le joueur de 1 pixel vers le bas
 	position.y += 1
 	print("Moved down")
 
