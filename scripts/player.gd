@@ -7,6 +7,7 @@ class_name Player
 
 @onready var mini_game = $MiniGame
 @onready var animation_player = $animation  # Assurez-vous que ce chemin est correct pour votre AnimationPlayer
+@onready var footstep_sound = $FootstepSound  # Assurez-vous que ce chemin est correct pour votre AudioStreamPlayer
 
 var gravity: float
 var jump_force: float
@@ -62,6 +63,8 @@ func _physics_process(delta: float):
 	velocity.y += gravity * delta
 
 	if can_move:
+		var was_moving = velocity.x != 0
+
 		if Input.is_action_pressed("ui_left"):
 			move_left()
 		elif Input.is_action_pressed("ui_right"):
@@ -74,6 +77,19 @@ func _physics_process(delta: float):
 
 		if Input.is_action_just_pressed("move_down") and on_ground:
 			move_down()
+
+		var is_moving = velocity.x != 0
+
+		if on_ground:
+			if is_moving and !was_moving:
+				if not footstep_sound.playing:
+					footstep_sound.play()
+			elif !is_moving and was_moving:
+				if footstep_sound.playing:
+					footstep_sound.stop()
+		else:
+			if footstep_sound.playing:
+				footstep_sound.stop()
 	else:
 		velocity.x = 0
 

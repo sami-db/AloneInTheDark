@@ -3023,4 +3023,4 @@ autoplay = true
 
 [node name="Door" parent="." instance=ExtResource("19_p41et")]
 position = Vector2(673, 336)
-next_scene = "res://stages/stage2.tscn"
+next_scene = "res://stages/stage1.tscn"

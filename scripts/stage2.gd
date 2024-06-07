@@ -1,11 +1,12 @@
-extends Node2D
+extends Node
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	# Rechercher le joueur dans les deux chemins possibles
+	var player = get_node_or_null("/root/Stage1/player")
+	if player == null:
+		player = get_node_or_null("/root/Stage2/player")
+	
+	if player:
+		player.can_move = true  # Réactiver les contrôles du joueur
+	else:
+		print("Erreur : Impossible de trouver le nœud Player dans aucun des chemins")

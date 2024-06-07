@@ -2,6 +2,7 @@ extends Area2D
 
 signal lampe_allumee
 
+@onready var fire_sound = $FireSound
 var showInteractionLabel = false
 var est_allumee = false
 
@@ -43,4 +44,5 @@ func allumer_lampe():
 	$PointLight2D.visible = true
 	$AnimationPlayer.play("allumer")
 	$AnimationPlayerLoop.play("loop_sprite")
+	fire_sound.play()
 	emit_signal("lampe_allumee")

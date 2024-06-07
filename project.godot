@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Jumper"
-run/main_scene="res://stages/stage1.tscn"
+config/name="Alone in the Dark"
+run/main_scene="res://stages/stage0.tscn"
 config/features=PackedStringArray("4.2", "C#")
 config/icon="res://icon.png"
 
@@ -21,6 +21,7 @@ ArduinoManager="*res://Arduino_Manager/Arduino_Manager.cs"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="viewport"
 window/size/width=640
 window/size/height=320
