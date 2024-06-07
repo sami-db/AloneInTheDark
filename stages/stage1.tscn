@@ -2934,3 +2934,4 @@ scale = Vector2(0.497078, 0.497078)
 
 [node name="Door" parent="." instance=ExtResource("11_t6dyt")]
 position = Vector2(609.458, 286)
+next_scene = "res://stages/stage2.tscn"
