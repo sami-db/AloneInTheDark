@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckk75xu5ptamg"]
+
+[ext_resource type="Texture2D" uid="uid://bf1ju1htm0xf2" path="res://assets/sprites/object/smalltorchOFF.png" id="1_5eqnh"]
+[ext_resource type="Script" path="res://scripts/lamp.gd" id="1_w7fsu"]
+[ext_resource type="FontFile" uid="uid://ce0yr85hkdf32" path="res://assets/fonts/PeaberryBase.ttf" id="4_qmpgv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7r5w"]
+size = Vector2(13.1675, 39.5295)
+
+[node name="Lamp" type="Area2D"]
+script = ExtResource("1_w7fsu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(176.942, 381.667)
+scale = Vector2(0.882057, 0.708333)
+texture = ExtResource("1_5eqnh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(177.58, 384.667)
+scale = Vector2(0.882057, 0.708333)
+shape = SubResource("RectangleShape2D_x7r5w")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 159.0
+offset_top = 366.0
+offset_right = 291.0
+offset_bottom = 389.0
+scale = Vector2(0.331869, 0.343885)
+theme_override_fonts/font = ExtResource("4_qmpgv")
+text = "[E] to interact"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

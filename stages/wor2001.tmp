@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://shadamp5ujm"]
+
+[ext_resource type="PackedScene" uid="uid://c2383u0jbk7y4" path="res://scenes/player.tscn" id="1"]
+[ext_resource type="AudioStream" uid="uid://bc4o6saxgk05o" path="res://sounds/bgmusic.ogg" id="2"]
+[ext_resource type="PackedScene" uid="uid://mheacsvs6kb3" path="res://scenes/map.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://5yujsbq7vgps" path="res://scenes/background.tscn" id="4"]
+[ext_resource type="Script" path="res://scripts/Control_Scene.gd" id="5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5p4y5"]
+size = Vector2(540.583, 512)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yfyde"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kxiv7"]
+noise = SubResource("FastNoiseLite_yfyde")
+
+[node name="world" type="Node2D"]
+position = Vector2(11, 11)
+scale = Vector2(1.22406, 1.12228)
+script = ExtResource("5")
+
+[node name="background" parent="." instance=ExtResource("4")]
+visible = false
+z_index = -99
+scroll_speed_x = 0.2
+scroll_speed_y = 0.2
+
+[node name="player" parent="." instance=ExtResource("1")]
+position = Vector2(277, 126)
+audio_jump = null
+speed = null
+jump_height = null
+time_jump_apex = null
+
+[node name="bgmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2")
+autoplay = true
+
+[node name="map" parent="." instance=ExtResource("3")]
+z_index = -1
+position = Vector2(7.35257, 7.12834)
+layer_0/tile_data = PackedInt32Array(1114126, 196738, 3, 1114127, 262274, 3, 1114128, 327810, 3, 524310, 196738, 3, 524311, 262274, 3, 524312, 327810, 3, 196625, 196738, 3, 196626, 262274, 3, 196627, 327810, 3, 196618, 196738, 3, 196619, 262274, 3, 196620, 327810, 3, 1048590, 524418, 1, 1048591, 589954, 1, 1048592, 655490, 1, 983054, 524418, 1, 983055, 589954, 1, 983056, 655490, 1, 917518, 524418, 1, 917519, 589954, 1, 917520, 655490, 1, 655363, 524418, 0, 655364, 589954, 0, 655365, 655490, 0, 655366, 721026, 0, 655369, 655490, 0, 655370, 721026, 0, 655371, 655490, 0, 655372, 524418, 0, 655367, 524418, 0, 655368, 589954, 0, 655373, 589954, 0, 655374, 655490, 0, 655375, 721026, 0, 655376, 524418, 0, 655377, 589954, 0, 655378, 655490, 0, 655379, 721026, 0, 655380, 524418, 0, 655381, 589954, 0, 655382, 655490, 0, 655383, 721026, 0, 655384, 524418, 0, 655385, 589954, 0, 655386, 655490, 0, 655387, 524418, 0, 655388, 589954, 0, 655389, 655490, 0, 655390, 721026, 0, 720908, 70, 0, 720909, 70, 0, 720900, 70, 0, 720901, 70, 0, 720902, 70, 0, 786438, 70, 0, 786439, 70, 0, 720904, 70, 0, 720905, 70, 0, 720906, 70, 0, 720907, 70, 0, 720910, 70, 0, 720911, 70, 0, 720912, 70, 0, 720913, 70, 0, 720914, 70, 0, 720915, 70, 0, 720916, 70, 0, 720917, 70, 0, 720918, 70, 0, 720919, 70, 0, 720920, 70, 0, 720921, 70, 0, 720922, 70, 0, 720923, 70, 0, 720924, 70, 0, 720925, 70, 0, 720926, 70, 0, 720903, 70, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(292.469, 196.921)
+scale = Vector2(0.829632, 0.119159)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-14.7704, 7.474)
+shape = SubResource("RectangleShape2D_5p4y5")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+visible = false
+texture = SubResource("NoiseTexture2D_kxiv7")
