@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c2383u0jbk7y4"]
+[gd_scene load_steps=26 format=3 uid="uid://c2383u0jbk7y4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cw4h4vu03qnhn" path="res://assets/sprites/jump_0.png" id="2_e6x1o"]
@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://dau05a6j2ejib" path="res://scenes/mini_game.tscn" id="18_84wwf"]
 [ext_resource type="Texture2D" uid="uid://bpou7brosfhm4" path="res://assets/sprites/death_1.png" id="18_w3bea"]
 [ext_resource type="Texture2D" uid="uid://disdpmj0p5egh" path="res://assets/sprites/death_0.png" id="19_gd151"]
-[ext_resource type="AudioStream" uid="uid://dryc7ty38g8m8" path="res://assets/sound/footstep.WAV" id="23_t7b5o"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(20, 24)
@@ -176,10 +175,6 @@ theme_override_fonts/font = ExtResource("17_ojo1g")
 [node name="MiniGame" parent="." instance=ExtResource("18_84wwf")]
 rotation = -0.0128102
 scale = Vector2(0.621296, 0.621296)
-
-[node name="FootstepSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("23_t7b5o")
-volume_db = 24.0
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 current = true

@@ -82,14 +82,11 @@ func _physics_process(delta: float):
 
 		if on_ground:
 			if is_moving and !was_moving:
-				if not footstep_sound.playing:
-					footstep_sound.play()
+				pass
 			elif !is_moving and was_moving:
-				if footstep_sound.playing:
-					footstep_sound.stop()
+				pass
 		else:
-			if footstep_sound.playing:
-				footstep_sound.stop()
+			pass
 	else:
 		velocity.x = 0
 
